@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(50deg,rgb(237, 130, 8),rgb(121, 121, 59));
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: -webkit-image-set();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 300px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px; 
+}
+
+.container div {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(45deg, rgb(8, 235, 178), #f06);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-size: 22px;
+    color: white; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.container div:hover {
+    background-color: hsla(289, 88%, 40%, 1); 
+}
+
+#restart {
+    background-color: rgb(53, 14, 89);
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100px;
+    margin: 20px auto;
+    font-size: larger;
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+#restart:hover {
+    background-color: rgb(80, 20, 130);
+}
+
+#winner{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(50deg, rgb(9,15,200));
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    animation: winnerGlow 1s infinite alternate;
+    background-color: rgba(hsl(0, 89%, 18%));
+    border-radius: 10px;
+    width: fit-content;
+    margin-top: 20px;
+    padding: 10px;
+    font: bolder;
+    
+}
+@keyframes winnerGlow {
+    12% {
+        text-shadow: 0 0 10px hwb(155 0% 23% / 0.325), 0 0 20px rgb(139, 13, 228), 0 0 30px #f06;
+    }
+    100% {
+        text-shadow: 0 0 20px rgb(255, 57, 255), 0 0 30px rgb(238, 0, 0), 0 0 40px rgb(107, 150, 127);
+    }
+}
+
+
